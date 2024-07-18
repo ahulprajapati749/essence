@@ -1,0 +1,81 @@
+{% extends 'index.html' %}
+{% block title %}
+<title>Essence - Fashion World | Signup</title>
+{% endblock%}
+{% block body %}
+<div class="container-fluid w-100 py-3">
+    <div class="center m-auto border p-5" style="width:85%">
+        <h6 class="text-center"><span class="text-primary" style="font-size: 25px;">update profile</span> </h6>
+        
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Full Name : " value="{{data.name}}">
+                </div>
+                <div class="col-md-6">
+                    <label for="pic" class="form-label"> profile pic</label>
+                    <input type="file" class="form-control" name="pic" id="pic">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email"
+                        placeholder="Enter Email Address : " value="{{data.email}}">
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone Number : " value="{{data.phone}}">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="addressline1" class="form-label">addressline1</label>
+                    <input type="text" class="form-control" name="addressline1" id="addressline1"
+                        placeholder="enter addressline1: ">
+                </div>
+                <div class="col-md-6">
+                    <label for="addressline2" class="form-label">address line 2</label>
+                    <input type="text" class="form-control" name="addressline2" id="addressline2"
+                        placeholder="address line 2 ">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="addressline3" class="form-label">addressline3</label>
+                    <input type="text" class="form-control" name="addressline3" id="addressline3"
+                        placeholder="enter addressline3: ">
+                </div>
+                <div class="col-md-6">
+                    <label for="pin" class="form-label">zip code</label>
+                    <input type="text" class="form-control" name="pin" id="pin"
+                        placeholder="zip code ">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="city" class="form-label">city</label>
+                <input type="text" class="form-control" name="city" id="city"
+                    placeholder="city: ">
+            </div>
+            <div class="col-md-6">
+                <label for="state" class="form-label">state</label>
+                <input type="text" class="form-control" name="state" id="state"
+                    placeholder="state">
+            </div>
+        </div>
+
+
+
+            
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary w-100 btn-sm">update</button>
+            </div>
+        </form>
+        <a href="/login/" class="text-primary">Already User?Login to Your Account</a>
+    </div>
+</div>
+{% endblock %}
